@@ -1,55 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import faker from 'faker';
-import "./styles.css";
-function Boxes()
-{
-    return(
-        <div className="ui cards" id = "first">
-        <div className="card">
-    <div className="content">
-      <img className="right floated mini ui image" src={faker.image.image()}/>
-      <div className="header">
-        Elliot Fu
-      </div>
-      <div className="meta">
-        Friends of Veronika
-      </div>
-      <div className="description">
-        Elliot requested permission to view your contact details
-      </div>
-    </div>
-    <div className="extra content">
-      <div className="ui two buttons">
-        <div className="ui basic green button">Approve</div>
-        <div className="ui basic red button">Decline</div>
-      </div>
-    </div>
-  </div>
-  <div className="card">
-    <div className="content">
-      <img className="right floated mini ui image" src={faker.image.image()}/>
-      <div className="header">
-        Jenny Hess
-      </div>
-      <div className="meta">
-        New Member
-      </div>
-      <div className="description">
-        Jenny wants to add you to the group <b>best friends</b>
-      </div>
-    </div>
-    <div className="extra content">
-      <div className="ui two buttons">
-        <div className="ui basic green button">Approve</div>
-        <div className="ui basic red button">Decline</div>
-      </div>
-    </div>
-  </div>
-  </div>
-    )
+import Card from './Card';
+
+const Boxes=()=>
+{ 
+  return( <>
+     <Card name = "SVECW" descri = "Autonomous College" para="suggested to girls who wants to secure a good job"/>
+     <Card name = "VIT" descri="Affilicated to JNTUK" para = "suggested to students who wants to secure a good job"/>
+  </> );
 }
+
 ReactDOM.render(
-    <Boxes/>,
+  <div>
+    <Boxes/>
+    </div>,
     document.getElementById("root")
 );
